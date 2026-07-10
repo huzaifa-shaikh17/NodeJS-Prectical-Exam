@@ -7,8 +7,7 @@ import userRouter from "./routes/userRouter.js";
 const port = envConfig.PORT || 8081;
 
 const app = express();
-app.use(bodyParser.urlencoded());
-app.use(bodyParser.json());
+app.use(express.json());
 
 app.use("/api/user", userRouter);
 
